@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "mat-multi-sort": [
+        "dist/mat-multi-sort"
+      ],
+      "mat-multi-sort/*": [
+        "dist/mat-multi-sort/*"
+      ]
+    }
   }
 }

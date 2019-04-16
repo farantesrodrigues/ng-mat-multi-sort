@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "mat-multi-sort": {
+      "root": "projects/mat-multi-sort",
+      "sourceRoot": "projects/mat-multi-sort/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mat-multi-sort/tsconfig.lib.json",
+            "project": "projects/mat-multi-sort/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mat-multi-sort/src/test.ts",
+            "tsConfig": "projects/mat-multi-sort/tsconfig.spec.json",
+            "karmaConfig": "projects/mat-multi-sort/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mat-multi-sort/tsconfig.lib.json",
+              "projects/mat-multi-sort/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-mat-multi-sort"
